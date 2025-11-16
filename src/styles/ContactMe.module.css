@@ -1,0 +1,109 @@
+.chatBubble .chatBubblee {
+    max-width: 850px;
+    background-color: var(--bg-color);
+    padding: 30px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2);
+    gap: 10px;
+}
+
+.chatBubble h1 {
+    margin-bottom: 20px;
+}
+
+.chatBubble .chatBubblee .chatbot {
+    align-self: flex-start;
+}
+
+.chatBubble .chatBubblee .user {
+    align-self: flex-end;
+}
+
+.userInput {
+    padding: "6px";
+    border: "1px solid #ccc";
+    border-radius: "6px";
+    margin-top: "4px";
+    width: "100%";
+    background-color: var(--bg-color);
+    border: 0;
+    border-bottom: 2px solid var(--highlight-text-color);
+    color: white;
+    font-size: 16px;
+    font-family: var(--font-family-2);
+    font-weight: 100;
+}
+
+.userInput:focus {
+    outline: none;
+    border-bottom: 2px solid var(--highlight-text-color);
+    cursor: text;
+}
+.userText {
+  max-width: 300px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  cursor: pointer;
+  color: white;
+  padding: 6px;
+  background: rgb(26, 35, 39);
+  border-radius: 6px;
+  display: inline-block;
+  font-size: 20px;
+}
+
+.typingText {
+  font-family: var(--font-family-2);
+  font-weight: 100;
+  white-space: pre-wrap;
+  display: inline-block;
+  font-size: 20px;
+}
+
+.submitBtn {
+    cursor: pointer;
+    background-color: var(--highlight-text-color);
+    color: var(--bg-color);
+    width: 80px;
+    height: auto;
+    padding: 10px;
+    border: none;
+    font-family: var(--font-family);
+    font-size: 18px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.cursor {
+  display: inline-block;
+  width: 1ch;
+  animation: blink 1s steps(1) infinite;
+  margin-left: 4px;
+}
+
+.cursor .done {
+    display: none;
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+@media (max-width: 650px) {
+  .userText {
+    width: 180px;
+    display: flex;
+  }
+  .userInput {
+    width: 150px;
+  }
+}

@@ -1,0 +1,89 @@
+.wholeContainer {
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.mainContainer {
+    min-height: 100vh;
+    box-sizing: border-box;
+    padding-top: 7vh;
+    padding-bottom: 7vh;
+    padding-left: 0vh;
+    padding-right: 5vh;
+    position: relative;
+    display: flex;
+    color: white;
+}
+
+.subContainer {
+    color: white;
+    width: 67vw;
+    background-color: var(--bg-color-2);
+    border-radius: 20px;
+    border: 1px solid black;
+    padding: 30px 20px;
+    font-family: var(--font-family);
+    flex: 1;
+    flex-wrap: wrap;
+    position: relative;
+
+    height: 85vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.subContainer h1 {
+    font-weight: var(--font-weight-1);
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.subContainer h1::after  {
+    content: "";
+    position: absolute;
+    height: 5px;
+    width: 60px;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(127deg,rgba(30, 145, 161, 1) 30%, rgba(237, 237, 237, 1) 100%);
+    border-radius: 10px;
+}
+
+.subContainer::-webkit-scrollbar {
+  width: 8px;                
+}
+
+.subContainer::-webkit-scrollbar-track {
+  background-color: var(--bg-color-2);  
+  border-radius: 10px;
+}
+
+.subContainer::-webkit-scrollbar-thumb {
+  background-color: #1e91a1;  
+  border-radius: 10px;
+}
+
+.subContainer {
+  scrollbar-width: thin;                        
+  scrollbar-color: #1e91a1 var(--bg-color-2);   
+}
+
+
+@media (max-width: 650px) {
+    .mainContainer {
+        padding: 0vh 5vw;
+    }
+    .subContainer {
+        min-height: 100vh;
+    }
+}
+
+@media (max-width: 1150px) {
+    .mainContainer {
+        padding: 0vh 5vw;
+    }
+    .wholeContainer {
+        flex-direction: column;
+    }
+}

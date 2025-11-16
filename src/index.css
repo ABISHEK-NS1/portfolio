@@ -1,0 +1,57 @@
+:root {
+    --primary-text-color: rgb(231, 229, 229);
+    --highlight-text-color: rgb(30, 145, 161);
+    --bg-color: rgb(26, 35, 39);
+    --bg-color-2: rgb(38, 51, 59);
+    --bg-color-3: rgb(43, 54, 61);
+    --font-family: "Bubblegum Sans", sans-serif;
+    --font-family-2: "Roboto", sans-serif;
+    --font-weight-1: 400;
+    --font-weight-2: 200;
+    --border-gradient-icon: linear-gradient(
+    to bottom right, 
+    hsl(0, 0%, 28%) 0%, 
+    hsla(0, 0%, 25%, 0) 50%
+  );
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-color);
+  cursor:url(/cursor.cur)4 0, auto;
+}
+
+a {
+  cursor: url('/cursor-hand.cur')5 0, auto;
+}
+
+button {
+  cursor: url('/cursor-hand.cur')5 0, auto;
+}
+
+body::-webkit-scrollbar {
+  width: 8px;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: var(--bg-color-2);
+  border-radius: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #1e91a1;
+  border-radius: 10px;
+}
+body {
+  scrollbar-width: 8px;
+  scrollbar-color: #1e91a1 var(--bg-color-2);
+}
+
+button:hover {
+  cursor: url('/cursor-hand.cur')5 0, pointer;;
+}

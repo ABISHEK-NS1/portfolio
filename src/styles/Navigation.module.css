@@ -1,0 +1,39 @@
+.navigation {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: rgb(53, 70, 80);
+    border: 1px solid rgba(238, 238, 238, 0.1);
+    border-radius: 10px;
+    padding: 10px 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 10;
+}
+
+.navigation li {
+    list-style-type: none;
+    font-size: 16px;
+}
+
+.navigation li a {
+    color: white;
+    text-decoration: none;
+    font-family: var(--font-family);
+}
+
+@media (max-width: 650px) {
+    .navigation {
+        flex-direction: row;
+        bottom: 0;
+        top: auto;
+        right: 0;
+        width: 100%;
+        justify-content: space-around;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        position: fixed;
+        opacity: 0.85;
+    }
+}

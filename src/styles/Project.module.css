@@ -1,0 +1,66 @@
+.projectBox {
+    background-color: var(--bg-color);
+    border-radius: 20px;
+    position: relative;
+    width: 300px;
+}
+
+.projectBox .imageWrapper {
+    position: relative;
+    width: 300px;
+    height: 140px;
+}
+
+.projectBox a:focus, .projectBox a:hover, .projectBox a:visited, a {
+    color: #f6f9fbff;
+}
+
+.projectBox .imageWrapper img {
+    width: 100%;
+    height: inherit;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    object-fit: cover; 
+    display: block;
+}
+
+
+.projectBox .projectInfos {
+    padding: 10px;
+}
+
+.projectBox .projectInfos h2 {
+    font-weight: 200;
+}
+
+.projectBox .projectInfos p {
+    font-weight: 100;
+    font-family: var(--font-family-2);
+    padding-right: 30px;
+}
+
+.projectBox .projectInfos h2, p {
+    letter-spacing: 0.5px;
+    word-spacing: 2px;      
+    line-height: 1.6;
+}
+
+.projectBox:hover {
+    box-shadow: 4px 6px 5px rgba(0, 0, 0, 0.667);
+}
+
+.projectBox:hover {
+  transform: scale(1.03) rotate(0.5deg);
+  transition: transform 0.3s ease;
+}
+
+
+@media (max-width: 650px) {
+    .projectBox {
+        width: 250px;
+    }
+
+    .projectBox .imageWrapper {
+        width: 250px;
+    }
+}

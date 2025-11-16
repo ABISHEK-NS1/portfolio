@@ -1,0 +1,115 @@
+.contents {
+    padding-top: 30px;
+    padding-right: 30px;
+    padding-left: 15px;
+}
+
+.contents p {
+    font-weight: 100;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+    word-spacing: 2px;      
+    line-height: 1.6;
+    font-family: var(--font-family-2);     
+    overflow-x: hidden;  
+}
+.skills {
+    padding-top: 30px;
+}
+
+.skills h2, .education h2 {
+    font-weight: 100;
+    padding-bottom: 10px;
+}
+
+.skillsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 2fr));
+}
+
+.skill {
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.skill p {
+  margin: 0 0 5px;
+}
+
+.bar {
+  width: 70%;
+  background-color: #ddd;
+  height: 10px;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+}
+
+.bar::after {
+  content: '';
+  position: absolute;
+  height: 100%;
+  background-color: #1e91a1ff;
+  width: 0%;
+  transition: width 0.5s ease-in-out;
+}
+
+.bar[data-level="60"]::after { width: 60%; }
+.bar[data-level="50"]::after { width: 50%; }
+.bar[data-level="70"]::after { width: 70%; }
+
+.education {
+    padding-bottom: 20px;
+    padding-top: 30px;
+}
+
+.timeline {
+    position: relative;
+    list-style: none;
+    padding-left: 30px;
+}
+
+.timeline li {
+  position: relative;
+  margin-bottom: 30px;
+  padding-left: 20px;
+}
+
+.timeline li::before {
+  content: '';
+  position: absolute;
+  top: 6px;
+  left: -27.5px;
+  width: 14px;
+  height: 14px;
+  background-color: #1e91a1;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 2px;
+    left: 10px;
+    background-color: #1e91a1ff;
+    border-radius: 10px;
+}
+
+.timeline .duration {
+  font-weight: lighter;
+  color: #1e91a1;
+  display: block;
+}
+
+.contents .aboutMeText span {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.contents .aboutMeText span:hover {
+  transform: rotate(5deg);
+  color: white;
+}
