@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styles from "../styles/Navigation.module.css";
 
 function Navigation() {
@@ -6,13 +7,13 @@ function Navigation() {
     <>
       <ul className={styles.navigation}>
         <li>
-          <a href="/">About</a>
+          <Link to="/">About</Link>
         </li>
         <li>
-          <a href="/projects">Projects</a>
+          <Link to="/projects">Projects</Link>
         </li>
         <li>
-          <a href="/contact-me">Contact</a>
+          <Link to="/contact-me">Contact</Link>
         </li>
       </ul>
     </>
